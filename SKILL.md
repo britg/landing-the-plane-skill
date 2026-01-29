@@ -54,6 +54,17 @@ git push
 git status  # MUST show "up to date with origin"
 ```
 
+### 5. Update the working issue in github.
+
+Whatever issue or issues that were worked on in github
+using the github cli.
+Update their checklists or
+denote what exactly was done in the issue body. Add a comment if it is
+relevant.
+
+Important: Move the issue to in review if it is complete, otherwise move
+or keep it in In Progress.
+
 **CRITICAL RULES:**
 - The plane has NOT landed until `git push` completes successfully
 - NEVER stop before `git push` - that leaves work stranded locally
