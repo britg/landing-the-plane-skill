@@ -36,7 +36,6 @@ git add -A
 # Commit with descriptive message
 git commit -m "Description of changes
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
 ```
 
 ### 4. Push to Remote - NON-NEGOTIABLE
