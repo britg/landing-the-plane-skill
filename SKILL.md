@@ -53,10 +53,12 @@ git push
 git status  # MUST show "up to date with origin"
 ```
 
-### 5. Update the working issue in github.
+### 5. Update the working issue in github ONLY if one was declared in the prompt or context.
+
+SKIP THIS STEP if no github issue was declared in the initial prompt or subsequent prompts.
 
 Whatever issue or issues that were worked on in github
-using the github cli.
+using the github cli that was explicitly declared byt he user.
 Update their checklists or
 denote what exactly was done in the issue body. Add a comment if it is
 relevant.
