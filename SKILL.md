@@ -1,9 +1,9 @@
 ---
-name: landing-the-plane
+name: land-the-plane
 description: Complete a work session by cleaning up, committing, and pushing all changes to remote. Use when the user says "land the plane", "wrap up", "finish up", or wants to complete their session and push all work.
 metadata:
-  author: user
-  version: "1.0.0"
+  author: britg
+  version: "1.1.0"
 ---
 
 # Landing the Plane
@@ -53,25 +53,13 @@ git push
 git status  # MUST show "up to date with origin"
 ```
 
-### 5. Update the working issue in github ONLY if one was declared in the prompt or context.
-
-SKIP THIS STEP if no github issue was declared in the initial prompt or subsequent prompts.
-
-Whatever issue or issues that were worked on in github
-using the github cli that was explicitly declared byt he user.
-Update their checklists or
-denote what exactly was done in the issue body. Add a comment if it is
-relevant.
-
-Important: Move the issue to in review if it is complete, otherwise move
-or keep it in In Progress.
-
 **CRITICAL RULES:**
 - The plane has NOT landed until `git push` completes successfully
 - NEVER stop before `git push` - that leaves work stranded locally
 - NEVER say "ready to push when you are!" - YOU must push, not the user
 - If `git push` fails, resolve the issue and retry until it succeeds
 - The user may be managing multiple sessions - unpushed work breaks coordination
+
 
 ### 5. Clean Up Git State
 ```bash
@@ -82,6 +70,14 @@ git remote prune origin            # Clean up deleted remote branches
 ### 6. Verify Clean State
 Ensure all changes are committed AND PUSHED, no untracked files remain.
 
+### 7. Update the working issue in github ONLY if one was declared in the prompt or context.
+
+Whatever issue or issues that were worked on in github
+using the github cli that was explicitly declared by the user.
+Update their checklists or
+denote what exactly was done in the issue body. Add a comment if it is
+relevant.
+
 ## Final Report
 
 Provide the user with:
@@ -90,5 +86,6 @@ Provide the user with:
 - Status of quality gates (all passing / issues filed)
 - Confirmation that ALL changes have been pushed to remote
 - Recommended next steps or follow-up work
+- A URL to github that is clickable to start a pull request of the changes
 
 **CRITICAL: Never end a "land the plane" session without successfully pushing. Unpushed work causes severe coordination problems.**
